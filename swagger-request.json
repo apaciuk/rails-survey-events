@@ -1,0 +1,31 @@
+"__comments not allowed in json__": "but here we go",
+
+"__postman/swagger post-to__": "hosted-url:3000/surveys/create",     
+"__data-type/headers__": "application/json",
+
+
+"__body__": "hash/params copy/paste below",
+
+ {
+ "survey": {
+ 
+  "fuel_type": "LPG",
+  "boiler_type": "Combi",
+  "current_room": "Kitchen",
+  "resettle": 1,
+  "convert_to_combi": 1,
+  "water_velocity": "very fast",
+  "new_room": "Utility",
+  "property_type": "Semi",
+  "over_sec_floor": 1,
+  "flue_ext_access": 1,
+  "flue_location": "Roof",
+  "flue_roof": "sloped",
+  "flue_position": "top",
+   "num_bed": "3",
+   "num_bath": "2",
+   "num_shower": "1",
+   "therm_valve": 1,
+   "user_ip": "149.86.90.191"
+   }
+ }
