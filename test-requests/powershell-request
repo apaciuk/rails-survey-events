@@ -1,0 +1,7 @@
+$headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
+$headers.Add("Content-Type", "application/json")
+
+$body = " {`n `"survey`": {`n `n  `"fuel_type`": `"LPG`",`n  `"boiler_type`": `"Combi`",`n  `"current_room`": `"Kitchen`",`n  `"resettle`": 1,`n  `"convert_to_combi`": 1,`n  `"water_velocity`": `"very fast`",`n  `"new_room`": `"Utility`",`n  `"property_type`": `"Semi`",`n  `"over_sec_floor`": 1,`n  `"flue_ext_access`": 1,`n  `"flue_location`": `"Roof`",`n  `"flue_roof`": `"sloped`",`n  `"flue_position`": `"top`",`n   `"num_bed`": `"3`",`n   `"num_bath`": `"2`",`n   `"num_shower`": `"1`",`n   `"therm_valve`": 1,`n   `"user_ip`": `"149.86.90.191`"`n   }`n }"
+
+$response = Invoke-RestMethod 'http://localhost:3000/surveys/create' -Method 'POST' -Headers $headers -Body $body
+$response | ConvertTo-Json
