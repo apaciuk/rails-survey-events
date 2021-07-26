@@ -25,4 +25,9 @@ test:
 
 production:
   <<: *default
-  database: db/survey_events_production
+  url: <%= ENV['DATABASE_URL'] %>
+  adapter: postgresql
+  port: 5432
+  database: survey_events_production
+  user: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>

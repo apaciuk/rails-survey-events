@@ -6,7 +6,7 @@ https://github.com/xhostcom/gasfast-user-survey-events.git
 
 Capture and distribute user survey results from JSON payload stored in survey-events db table (in this case Boilers, but can be altered to suit others)
 
-Work in progress
+Work in progress, test request in swagger-request.json
 
 * Ruby version
 
