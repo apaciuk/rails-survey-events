@@ -40,17 +40,16 @@ ActiveRecord::Schema.define(version: 2021_07_25_122647) do
     t.integer "num_shower"
     t.boolean "therm_valve", default: false, null: false
     t.boolean "deleted", default: false, null: false
-    t.string "user_ip", default: ""
-    t.integer "user_id"
+    t.string "user_id", default: ""
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_surveys_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.integer "survey_id", null: false
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
+    t.string "user_id", default: ""
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["survey_id"], name: "index_users_on_survey_id"

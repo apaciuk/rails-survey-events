@@ -19,8 +19,7 @@ class CreateSurveys < ActiveRecord::Migration[6.0]
       t.integer :num_shower
       t.boolean :therm_valve, null: false, default: false
       t.boolean :deleted, null: false, default: false
-      t.string :user_ip, null: true, default: ""
-      t.references :user, index: true
+      t.string :user_id, null: true, default: ""
       t.timestamps
     end
   end

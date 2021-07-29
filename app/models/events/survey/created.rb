@@ -17,7 +17,7 @@ class Events::Survey::Created < Events::Survey::BaseEvent
     :num_bath,
     :num_shower,
     :therm_valve,
-    :user_ip 
+    :user_id 
   
     def apply(survey)
     survey.fuel_type = fuel_type #string
@@ -37,7 +37,7 @@ class Events::Survey::Created < Events::Survey::BaseEvent
     survey.num_bath = num_bath #integer
     survey.num_shower = num_shower #integer
     survey.therm_valve = therm_valve
-    survey.user_ip = user_ip #string
+    survey.user_id = user_id #string
 
 
     survey

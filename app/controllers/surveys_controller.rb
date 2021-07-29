@@ -1,7 +1,7 @@
 class SurveysController < ApplicationController
 skip_before_action :verify_authenticity_token, only: [:create, :destroy]
 def create
-    user_ip = request.remote_ip
+    user_id = request.remote_ip
     Events::Survey::Created.create(payload: survey_params)
 end
   
@@ -25,6 +25,6 @@ private def survey_params
       :num_bath,
       :num_shower,
       :therm_valve,
-      :user_ip )
+      :user_id)
   end
 end
